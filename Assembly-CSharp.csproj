@@ -63,8 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ArenaCreator.cs" />
-    <Compile Include="Assets\Scripts\BallScript.cs" />
+    <Compile Include="Assets\Scripts\ball.cs" />
+    <Compile Include="Assets\Scripts\BallsGenerator.cs" />
     <Compile Include="Assets\Scripts\ConfigLoader.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\SpeedText.cs" />
+    <Compile Include="Assets\Scripts\TimeSimulate.cs" />
     <Compile Include="Assets\SimpleJSON\SimpleJSON.cs" />
     <Compile Include="Assets\SimpleJSON\SimpleJSONBinary.cs" />
     <Compile Include="Assets\SimpleJSON\SimpleJSONUnity.cs" />

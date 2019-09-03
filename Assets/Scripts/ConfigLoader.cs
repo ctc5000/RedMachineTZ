@@ -19,7 +19,7 @@ public class ConfigLoader : MonoBehaviour
     public static  int unitSpawnDelay;
     public static  int numUnitsToSpawn;
     public static float minUnitRadius;
-    public static int maxUnitRadius;
+    public static float maxUnitRadius;
     public static float minUnitSpeed;
     public static float maxUnitSpeed;
         
