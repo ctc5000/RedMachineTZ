@@ -63,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ArenaCreator.cs" />
-    <Compile Include="Assets\Scripts\ball.cs" />
     <Compile Include="Assets\Scripts\ball2.cs" />
     <Compile Include="Assets\Scripts\BallsGenerator.cs" />
     <Compile Include="Assets\Scripts\BallSprite.cs" />
@@ -73,6 +72,7 @@
     <Compile Include="Assets\Scripts\JsonWork\DataController.cs" />
     <Compile Include="Assets\Scripts\Ortho2dCamera.cs" />
     <Compile Include="Assets\Scripts\SampleSprite.cs" />
+    <Compile Include="Assets\Scripts\SaveManager.cs" />
     <Compile Include="Assets\Scripts\SpeedText.cs" />
     <Compile Include="Assets\Scripts\TimeSimulate.cs" />
     <Compile Include="Assets\SimpleJSON\SimpleJSON.cs" />

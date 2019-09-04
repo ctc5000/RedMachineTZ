@@ -37,11 +37,11 @@ public class ball2 : MonoBehaviour
         ConfigLoader.ReadConfig();
 
 
-        if (transform.position.x < (-ConfigLoader.gameAreaWidth / 2) + 2f)
+        if (transform.position.x < (-ConfigLoader.gameAreaWidth / 2) + 4f)
         {
             moveX = -moveX;
         }
-        if (transform.position.x > (ConfigLoader.gameAreaWidth / 2)-2f)
+        if (transform.position.x > (ConfigLoader.gameAreaWidth / 2)-4f)
         {
             moveX = -moveX;
         }
@@ -54,11 +54,11 @@ public class ball2 : MonoBehaviour
             moveY = -moveY;
         }
 
-        if (transform.position.x < (-ConfigLoader.gameAreaWidth / 2) - 2f|| transform.position.x > (ConfigLoader.gameAreaWidth / 2) + 2f)
+        if (transform.position.x < (-ConfigLoader.gameAreaWidth / 2) - 0.2f|| transform.position.x > (ConfigLoader.gameAreaWidth / 2) + 0.2f)
         {
             transform.position = new Vector2(0, 0);
         }
-        if (transform.position.y < (-ConfigLoader.gameAreaHeight / 2) - 2f|| transform.position.y > (ConfigLoader.gameAreaHeight / 2) + 2f)
+        if (transform.position.y < (-ConfigLoader.gameAreaHeight / 2) - 0.2f|| transform.position.y > (ConfigLoader.gameAreaHeight / 2) + 0.2f)
         {
            transform.position = new Vector2(0, 0);
         }
