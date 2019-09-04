@@ -18,5 +18,12 @@ public class ArenaCreator : MonoBehaviour
         _Arena.GetComponent<SampleSprite>().size = new Vector2(ConfigLoader.gameAreaWidth, ConfigLoader.gameAreaHeight);
         return _Arena;
     }
+
+    public static GameObject ArenaLoadGenerator(GameObject ArenaPrefab, int Width, int Height)
+    {
+        GameObject _Arena = Instantiate<GameObject>(ArenaPrefab);
+        _Arena.GetComponent<SampleSprite>().size = new Vector2(Width,Height);
+        return _Arena;
+    }
   
 }
