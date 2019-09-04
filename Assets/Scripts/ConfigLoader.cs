@@ -9,8 +9,9 @@ using SimpleJSON;
 [System.Serializable]
 public class ConfigLoader : MonoBehaviour
 {
+
     /*Config Params*/
-    string path = "Assets/GameConfig/json.txt";
+    string path = Application.dataPath + "/StreamingAssets/json.txt";
     public static string jsonData;
 
     //Pulic trigers
@@ -27,7 +28,7 @@ public class ConfigLoader : MonoBehaviour
 
     static void ReadString()
     {
-        string path = "Assets/GameConfig/json.txt";
+        string path = Application.dataPath + "/StreamingAssets/json.txt";
         //Read the text from directly from the path file
         StreamReader reader = new StreamReader(path);
         jsonData = reader.ReadToEnd();

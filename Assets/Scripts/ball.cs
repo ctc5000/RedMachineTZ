@@ -35,6 +35,8 @@ public class ball : MonoBehaviour
             transform.position = new Vector2(0, 0);
         }
 
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -61,7 +63,6 @@ public class ball : MonoBehaviour
             {
                 GetComponent<Animator>().SetTrigger("Punch");
 
-                print(StartSize * 0.2f);
                 if ((transform.localScale.x - StartSize / 10) <=  0.2f)
                 {
                     Gm.DestroyBall(gameObject);

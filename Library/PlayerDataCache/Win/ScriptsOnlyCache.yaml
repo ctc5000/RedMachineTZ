@@ -1,12 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ArenaCreator
-    - BallsGenerator
+    - BallSprite
     - GameManager
+    - InformLoader
+    - Ortho2dCamera
+    - SampleSprite
     - SpeedText
     - TimeSimulate
     - ball
+    - ball2
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -27,16 +30,18 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.PhysicsRaycaster
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Outline
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -45,7 +50,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -53,11 +62,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
-    - Class: 61
-      Script: {instanceID: 0}
     - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -66,35 +71,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9648}
-    - Class: 114
       Script: {instanceID: 9652}
     - Class: 114
-      Script: {instanceID: 9814}
+      Script: {instanceID: 9788}
     - Class: 114
-      Script: {instanceID: 9854}
+      Script: {instanceID: 9816}
     - Class: 114
-      Script: {instanceID: 10252}
+      Script: {instanceID: 9856}
     - Class: 114
-      Script: {instanceID: 10622}
+      Script: {instanceID: 9974}
     - Class: 114
-      Script: {instanceID: 11100}
+      Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 11412}
+      Script: {instanceID: 10168}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 11502}
+      Script: {instanceID: 10628}
     - Class: 114
-      Script: {instanceID: 11576}
+      Script: {instanceID: 10822}
     - Class: 114
-      Script: {instanceID: 15840}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 22584}
+      Script: {instanceID: 11344}
     - Class: 114
-      Script: {instanceID: 24732}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 26232}
+      Script: {instanceID: 11476}
+    - Class: 114
+      Script: {instanceID: 11510}
+    - Class: 114
+      Script: {instanceID: 24372}
+    - Class: 114
+      Script: {instanceID: 26228}
+    - Class: 114
+      Script: {instanceID: 26764}
+    - Class: 114
+      Script: {instanceID: 27652}
+    - Class: 114
+      Script: {instanceID: 45992}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -154,6 +169,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: fe3c09894a5d01f10c8b3741bb24827f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ball
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -222,6 +243,12 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: 5c9e93af5923b8c1f696398a7bff2dc1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeSimulate
+  - hash:
+      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -268,6 +295,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 3024b894466099b809b4804e9099bb9d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpeedText
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -450,6 +483,18 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 63bb6b6b835616d48f21c2a264fadcb6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 135884d4abb9f65cb9a0b0119e14416f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BallsGenerator
+  - hash:
+      serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -540,35 +585,41 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: 38dfa4d866c0bc8e3de6b5c529d59349
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Ortho2dCamera
+  - hash:
+      serializedVersion: 2
+      Hash: dcfb10e661b64685e6bc12339d2182b1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SampleSprite
+  - hash:
+      serializedVersion: 2
+      Hash: dcfb10e661b64685e6bc12339d2182b1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BallSprite
+  - hash:
+      serializedVersion: 2
       Hash: fe3c09894a5d01f10c8b3741bb24827f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ball
+    className: ball2
   - hash:
       serializedVersion: 2
-      Hash: 135884d4abb9f65cb9a0b0119e14416f
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: BallsGenerator
+    className: DataController
   - hash:
       serializedVersion: 2
-      Hash: 3024b894466099b809b4804e9099bb9d
+      Hash: e5f14a4a291cbc25dad091f3e2aa26ad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SpeedText
-  - hash:
-      serializedVersion: 2
-      Hash: 5c9e93af5923b8c1f696398a7bff2dc1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TimeSimulate
-  - hash:
-      serializedVersion: 2
-      Hash: 49759093bf3d3e6c5d4020ce23807891
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
+    className: InformLoader
   platform: 5
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Main.unity
   playerPath: F:/Unity_project/RedMachineTZ/Build/RedMachineTZ.exe

@@ -15,8 +15,7 @@ public class ArenaCreator : MonoBehaviour
     public static GameObject ArenaGenerator(GameObject ArenaPrefab)
     {
         GameObject _Arena = Instantiate<GameObject>(ArenaPrefab);
-        _Arena.transform.localScale = new Vector3(ConfigLoader.gameAreaWidth, ConfigLoader.gameAreaHeight,0);
-        // GetComponent<BallsGenerator>().BallsGenerate(_Arena);
+        _Arena.GetComponent<SampleSprite>().size = new Vector2(ConfigLoader.gameAreaWidth, ConfigLoader.gameAreaHeight);
         return _Arena;
     }
   

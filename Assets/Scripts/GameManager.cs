@@ -13,29 +13,25 @@ public class GameManager : MonoBehaviour
     public ArenaCreator Creator;
     public GameObject WinPanel;
     public bool StartGenerate ;
-    public int maxGenerated;
     int GeneratedBalls;
     public float TimeCreate;
     float TimeSpawn;
     bool win;
     bool mustCheck;
-    public GameObject camobject;
 
     // Start is called before the first frame update
     void Start()
     {
         ConfigLoader.ReadConfig();
-        camobject = GameObject.Find("Main Camera");
-        if (ConfigLoader.gameAreaHeight > ConfigLoader.gameAreaWidth) camobject.GetComponent<Camera>().orthographicSize = ConfigLoader.gameAreaHeight + 20;
-        else camobject.GetComponent<Camera>().orthographicSize = ConfigLoader.gameAreaWidth + 20;
     }
 
 
 
     public void StartGameSimulation()
     {
-        GameObject.Find("StartPanel").SetActive(false);
-        GameArena= ArenaCreator.ArenaGenerator(ArenaPrefab);
+       
+         GameObject.Find("StartPanel").SetActive(false);
+        GameArena = ArenaCreator.ArenaGenerator(ArenaPrefab);
         StartGenerate = true;
     }
     public void RestartGameSimulation()
@@ -47,13 +43,13 @@ public class GameManager : MonoBehaviour
     {
         if (!win&&mustCheck)
         {
-            CheckWin();
+           CheckWin();
         }
         if (StartGenerate)
         {
-            if (TimeSpawn >= TimeCreate)
+            if (TimeSpawn >= ConfigLoader.unitSpawnDelay/1000)
             {
-                if (GeneratedBalls < maxGenerated)
+                if (GeneratedBalls < ConfigLoader.numUnitsToSpawn)
                 {
                     GenerateTeams();
                     GeneratedBalls++;
@@ -78,7 +74,7 @@ public class GameManager : MonoBehaviour
 
         if (GeneratedBalls % 2 == 0)
         {
-            GameObject Ball = BallsGenerator.BaalsProps(GameArena, "Blue", Color.blue, GetComponent<GameManager>());
+            GameObject Ball = BallsGenerator.BaalsProps(GameArena, GetComponent<GameManager>(),"Blue");
             BlueTeam.Add(Ball);
             GameObject.Find("BlueTeam").GetComponent<Slider>().maxValue = BlueTeam.Count;
             GameObject.Find("BlueTeam").GetComponent<Slider>().value = BlueTeam.Count;
@@ -86,10 +82,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            GameObject Ball = BallsGenerator.BaalsProps(GameArena, "Red", Color.red, GetComponent<GameManager>());
+            GameObject Ball = BallsGenerator.BaalsProps(GameArena,GetComponent<GameManager>(), "Red");
             RedTeam.Add(Ball);
-            GameObject.Find("RedTeam").GetComponent<Slider>().value = RedTeam.Count;
             GameObject.Find("RedTeam").GetComponent<Slider>().maxValue = RedTeam.Count;
+            GameObject.Find("RedTeam").GetComponent<Slider>().value = RedTeam.Count;
+            
         }
         
     }
