@@ -62,22 +62,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ArenaCreator.cs" />
-    <Compile Include="Assets\Scripts\ball2.cs" />
-    <Compile Include="Assets\Scripts\BallsGenerator.cs" />
-    <Compile Include="Assets\Scripts\BallSprite.cs" />
-    <Compile Include="Assets\Scripts\ConfigLoader.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\InformLoader.cs" />
-    <Compile Include="Assets\Scripts\JsonWork\DataController.cs" />
-    <Compile Include="Assets\Scripts\Ortho2dCamera.cs" />
-    <Compile Include="Assets\Scripts\SampleSprite.cs" />
-    <Compile Include="Assets\Scripts\SaveManager.cs" />
-    <Compile Include="Assets\Scripts\SpeedText.cs" />
-    <Compile Include="Assets\Scripts\TimeSimulate.cs" />
-    <Compile Include="Assets\SimpleJSON\SimpleJSON.cs" />
-    <Compile Include="Assets\SimpleJSON\SimpleJSONBinary.cs" />
-    <Compile Include="Assets\SimpleJSON\SimpleJSONUnity.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\ball2.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\Ortho2dCamera.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\GuiScripts\InformLoader.cs" />
+    <Compile Include="Assets\Scripts\GuiScripts\SpeedText.cs" />
+    <Compile Include="Assets\Scripts\GuiScripts\TimeSimulate.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\BallSprite.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\SampleSprite.cs" />
+    <Compile Include="Assets\Scripts\SimpleJSON\SimpleJSONBinary.cs" />
+    <Compile Include="Assets\Scripts\SimpleJSON\SimpleJSONUnity.cs" />
+    <Compile Include="Assets\Scripts\StaticScripts\ArenaCreator.cs" />
+    <Compile Include="Assets\Scripts\StaticScripts\BallsGenerator.cs" />
+    <Compile Include="Assets\Scripts\StaticScripts\CloseProgram.cs" />
+    <Compile Include="Assets\Scripts\StaticScripts\ConfigLoader.cs" />
+    <Compile Include="Assets\Scripts\StaticScripts\SimpleJSON.cs" />
     <None Include="Assets\StreamingAssets\json.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/Unity_project/RedMachineTZ/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
